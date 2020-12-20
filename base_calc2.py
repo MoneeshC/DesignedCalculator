@@ -139,9 +139,12 @@ def mul():
     e.delete(0,END)
     
 def eq():
-    sn=e.get()
-    e.delete(0,END)
     
+    sn=e.get()
+    
+    e.delete(0,END)
+    if mat=='nill':
+        return
     if mat=="Add":    
         e.insert(0, f + int(sn))
     if mat=="sub":    
@@ -154,7 +157,7 @@ def eq():
 d=20
 c="#fffff1"
 b=5
-
+mat='null'
 Bu1=Button(root,image=img_one,borderwidth=b,command=lambda: button_click(1))
 Bu2=Button(root,image=img_two,borderwidth=b,command=lambda: button_click(2))
 Bu3=Button(root,image=img_three,borderwidth=b,command=lambda: button_click(3))
